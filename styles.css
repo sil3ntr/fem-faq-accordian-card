@@ -55,9 +55,30 @@
     isolation: isolate;
   }
 
+.card {
+  display: flex;
+  justify-content: 100vd;
+}
+
 .container {
     position: relative;
     max-width: 50rem;
+}
+.accordion .label::before {
+  content: url('./images/icon-arrow-down.svg');
+  position: absolute;
+  font-size: 1rem;
+  top: 0%;
+  right: 2px;
+}
+
+.accordion .container.active .label {
+  content: url('./images/icon-arrow-down.svg');
+  position: absolute;
+  font-size: 1rem;
+  top: 0%;
+  right: 2px;
+  transform: rotate(180deg);
 }
 
 .accordion .label {
