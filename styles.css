@@ -58,24 +58,23 @@
 .container {
     position: relative;
     max-width: 50rem;
-    border: 2px solid black;
 }
 
-.label {
+.accordion .label {
     position: relative;
     font-size: 1rem;
     cursor: pointer;
 }
 
-.content {
+.accordion .content {
     position: relative;
     height: 0;
     transition: 0.5s;
     overflow: hidden;
 }
 
-.content:active {
-    height: 10rem;
+.accordion .container.active .content {
+    height: 5rem;
 }
   
 
