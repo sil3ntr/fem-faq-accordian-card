@@ -6,6 +6,10 @@
 *, *::before, *::after {
     box-sizing: border-box;
     --light-grayish-blue: hsl(240, 5%, 91%);
+    --soft-violet: hsl(273, 75%, 66%);
+    --soft-blue: hsl(240, 73%, 65%);
+
+    --mobile: 30rem;
   }
   /*
     2. Remove default margin
@@ -62,19 +66,73 @@ main {
   align-items: center;
   height: 100vh;
   height: 100dvh;
+
+  background: linear-gradient(var(--soft-blue), var(--soft-violet));
 }
 
 hr {
   border: 1px solid var(--light-grayish-blue);
 } 
 
+@media screen and (max-width: 900px) {
+
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .box-illustration{
+    position: absolute;
+    top: -10rem;
+  }
+
+  .woman-illustration {
+    position: absolute;
+    top: -10rem;
+  }
+}
+
 .card {
-  width: 1200px;
+  display: flex;
+  background-color: #fff;
+  max-width: 60rem;
+  border-radius: 1rem
+
+}
+
+.graphics {
+  display: flex;
+  width: 30rem;
+
+  background-image: url('./images/bg-pattern-desktop.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  
+
+  position: relative;
+}
+
+.box-illustration {
+  position: absolute;
+  top: 11rem;
+  left: -6rem;
+  z-index: 2;
+}
+
+.woman-illustration {
+  position: absolute;
+  top: 5rem;
+  left: -4.5rem;
+  z-index: 1;
+  
+}
+
+.accordion {
+  padding: 20px;
 }
 
 .container {
     position: relative;
-    max-width: 50rem;
     padding-block: 1rem;
 }
 .accordion .label::before {
@@ -114,6 +172,9 @@ hr {
   font-weight: 700;
 }
 
+.line {
+  padding-block: 10px;
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
