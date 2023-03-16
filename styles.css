@@ -77,30 +77,14 @@ hr {
   border: 1px solid var(--light-grayish-blue);
 } 
 
-@media screen and (max-width: 900px) {
 
-  .card {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .box-illustration{
-    position: absolute;
-    top: -10rem;
-  }
-
-  .woman-illustration {
-    position: absolute;
-    top: -10rem;
-  }
-}
 
 .card {
   display: flex;
   background-color: #fff;
-  max-width: 70rem;
+  max-width: 60rem;
   border-radius: 1rem;
-  padding-right: 30px
+  padding-right: 1rem;
 }
 
 .graphics {
@@ -129,13 +113,13 @@ hr {
 }
 
 .accordion {
-  width: 30rem;
-  padding: 60px;
+  max-width: 30rem;
+  padding: 2rem;
 }
 
 .content {
   color: var(--dark-grayish-blue);
-  font-size: 0.9rem;
+  font-size: 0.9em;
 }
 
 .label {
@@ -150,7 +134,7 @@ hr {
 .accordion .label::before {
   content: url('./images/icon-arrow-down.svg');
   position: absolute;
-  font-size: 1rem;
+  font-size: 1em;
   top: 0%;
   right: 2px;
 }
@@ -158,14 +142,14 @@ hr {
 .accordion .container.active .label::before {
   content: url('./images/icon-arrow-down.svg');
   position: absolute;
-  font-size: 1rem;
+  font-size: 1em;
   right: 2px;
   transform: rotate(180deg);
 }
 
 .accordion .label {
     position: relative;
-    font-size: 1rem;
+    font-size: 1.2em;
     cursor: pointer;
 }
 
@@ -185,6 +169,43 @@ hr {
 
 .line {
   padding-block: 10px;
+
+}
+
+
+@media screen and (max-width: 900px) {
+
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .graphics {
+    position: relative;
+  }
+
+  .box-illustration{
+    position: absolute;
+    max-width: 20%;
+    top: -3rem;
+    left: 1.5rem;
+    z-index: 2;
+   
+  }
+
+  .woman-illustration {
+    position: absolute;
+    max-width: 50%;
+    top: -7rem;
+    left: 2.5rem;
+    z-index: 1;
+  
+  }
+  .card {
+    max-width: 20rem;
+  }
+  .line {
+    padding: 2px;
+  }
 
 }
 
