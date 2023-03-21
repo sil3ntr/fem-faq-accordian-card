@@ -135,14 +135,11 @@ hr {
 .accordion .label::before {
   content: url('./images/icon-arrow-down.svg');
   position: absolute;
-  font-size: 1em;
+  font-size: 1.2em;
   top: 0%;
   right: -8px;
 }
 
-.label-text {
-  padding-right: 2px;
-}
 
 .accordion .container.active .label::before {
   content: url('./images/icon-arrow-down.svg');
@@ -154,7 +151,7 @@ hr {
 
 .accordion .label {
     position: relative;
-    font-size: 1em;
+    font-size: 1.2em;
     cursor: pointer;
 }
 
