@@ -24,6 +24,7 @@
   */
   html, body {
     height: 100%;
+    background: linear-gradient(var(--soft-violet),var(--soft-blue));
   }
   /*
     Typographic tweaks!
@@ -136,7 +137,11 @@ hr {
   position: absolute;
   font-size: 1em;
   top: 0%;
-  right: 2px;
+  right: -8px;
+}
+
+.label-text {
+  padding-right: 2px;
 }
 
 .accordion .container.active .label::before {
@@ -149,7 +154,7 @@ hr {
 
 .accordion .label {
     position: relative;
-    font-size: 1.2em;
+    font-size: 1em;
     cursor: pointer;
 }
 
